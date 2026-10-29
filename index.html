@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f0e0c">
+<title>Recipes</title>
+<style>
+:root{--bg:#0f0e0c;--card:#17150f;--line:#2a2418;--ink:#f4efe2;--dim:#9d9684;--lime:#c8f560;--pink:#ff4fa3}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.45 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom)}
+header{position:sticky;top:0;z-index:6;background:rgba(15,14,12,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 14px;display:flex;gap:10px;align-items:center}
+h1{font-size:17px;margin:0;font-weight:650;letter-spacing:.01em} h1 span{color:var(--pink)}
+#q{flex:1;min-width:0;background:#1a1710;border:1px solid var(--line);color:inherit;padding:10px 12px;border-radius:11px;font:inherit}
+#q:focus{outline:none;border-color:#4a4130}
+#add{flex:0 0 auto;background:var(--lime);color:#0f0e0c;border:0;width:42px;height:42px;border-radius:12px;font-size:22px;font-weight:800;line-height:1;cursor:pointer}
+.chips{display:flex;gap:7px;overflow-x:auto;padding:11px 14px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;background:#1a1710;border:1px solid var(--line);color:#bab3a0;padding:6px 12px;border-radius:999px;font-size:13px;cursor:pointer;font-family:inherit}
+.chip.on{background:var(--lime);color:#0f0e0c;border-color:var(--lime);font-weight:600}
+.grid{display:grid;grid-template-columns:1fr;gap:12px;padding:2px 14px 130px}
+@media(min-width:660px){.grid{grid-template-columns:1fr 1fr;max-width:900px;margin:0 auto}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:14px;position:relative;cursor:pointer;transition:border-color .12s,transform .12s}
+.card:active{transform:scale(.99)}
+.card.sel{border-color:var(--lime);box-shadow:inset 0 0 0 1px var(--lime)}
+.card img{width:100%;height:132px;object-fit:cover;border-radius:10px;display:block;margin-bottom:10px}
+.emoji{font-size:34px;line-height:1.1}
+.card h3{margin:8px 0 4px;font-size:16px;font-weight:620;padding-right:34px}
+.card p{margin:0;color:var(--dim);font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tick{position:absolute;top:11px;right:11px;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#0f0e0c cc;display:grid;place-items:center;font-size:14px;color:#7e7765;cursor:pointer}
+.card.sel .tick{background:var(--lime);border-color:var(--lime);color:#0f0e0c}
+.empty{color:var(--dim);text-align:center;padding:40px 10px;grid-column:1/-1}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:7;background:#141209;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center}
+.bar[hidden]{display:none}
+.bar .n{flex:1;font-size:14px;color:var(--dim)}
+button{font-family:inherit}
+button.primary{background:var(--lime);color:#0f0e0c;border:0;padding:11px 15px;border-radius:11px;font-weight:650;font-size:15px;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--line);color:#c9c2ae;padding:10px 13px;border-radius:11px;font-size:14px;cursor:pointer}
+button.bare{background:none;border:0;color:var(--dim);font-size:22px;line-height:1;padding:4px 6px;cursor:pointer}
+dialog{border:0;padding:0;border-radius:16px;background:#141209;color:inherit;width:min(560px,100%);max-height:92vh;box-shadow:0 18px 60px #000c}
+dialog::backdrop{background:#000a}
+.sheet{padding:16px;display:flex;flex-direction:column;gap:13px;overflow:auto;max-height:92vh}
+.sheet h2{margin:0;font-size:16px;font-weight:650}
+label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:#8a836f;margin-bottom:5px}
+input,textarea,select{width:100%;background:#0f0e0c;border:1px solid var(--line);color:inherit;padding:11px;border-radius:11px;font:inherit}
+input:focus,textarea:focus{outline:none;border-color:#4a4130}
+textarea{min-height:92px;resize:vertical;line-height:1.5}
+.row{display:flex;gap:10px}.row>*{flex:1}
+.hint{font-size:12px;color:#7e7765;line-height:1.4}
+#preview{max-width:100%;border-radius:10px;display:none}
+ul.shop{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+ul.shop li{display:flex;gap:10px;align-items:flex-start;padding:9px 4px;border-bottom:1px solid #1e1a12}
+ul.shop li:last-child{border-bottom:0}
+ul.shop input{width:auto;flex:0 0 auto;margin-top:3px;accent-color:#c8f560}
+ul.shop .it{flex:1}
+ul.shop .src{display:block;font-size:11px;color:#6f6959;margin-top:2px}
+ul.shop li.done .it{opacity:.4;text-decoration:line-through}
+</style>
+</head>
+<body>
+<header>
+  <h1>Recipes<span>.</span></h1>
+  <input id="q" type="search" placeholder="Search recipes or ingredients" autocomplete="off">
+  <button id="add" title="Add recipe">+</button>
+  <button id="settings" class="bare" title="Sync settings">⚙</button>
+</header>
+<div id="chips" class="chips"></div>
+<main id="grid" class="grid"></main>
+<div id="bar" class="bar" hidden>
+  <span class="n" id="barn"></span>
+  <button id="clearsel" class="ghost">Clear</button>
+  <button id="shopping" class="primary">Shopping list</button>
+</div>
+
+<dialog id="editor">
+  <form class="sheet" id="eform" method="dialog">
+    <h2 id="etitle">New recipe</h2>
+    <div class="row">
+      <div style="flex:0 0 84px"><label>Emoji</label><input id="e-emoji" maxlength="4" placeholder="🍝"></div>
+      <div><label>Name</label><input id="e-name" required placeholder="Lemon spaghetti"></div>
+    </div>
+    <div><label>Ingredients — one per line</label><textarea id="e-ing" placeholder="200g spaghetti&#10;3 cloves garlic&#10;1 lemon&#10;salt to taste"></textarea>
+      <p class="hint">Quantities and units are read automatically: 2 cups flour · 1½ tsp cumin · 1-2 lemons · 400g tinned tomatoes.</p></div>
+    <div><label>Method</label><textarea id="e-method" placeholder="Boil the pasta…"></textarea></div>
+    <div><label>Photo (optional)</label><input id="e-photo" type="file" accept="image/*"><img id="preview" alt=""></div>
+    <div class="row">
+      <button type="button" id="e-del" class="ghost">Delete</button>
+      <button type="button" id="e-cancel" class="ghost">Cancel</button>
+      <button type="submit" class="primary">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="shop">
+  <div class="sheet">
+    <h2>Shopping list</h2>
+    <ul class="shop" id="shoplist"></ul>
+    <div class="row">
+      <button type="button" id="shopcopy" class="ghost">Copy as text</button>
+      <button type="button" id="shopclose" class="primary">Done</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="cfgdlg">
+  <div class="sheet">
+    <h2>Sync</h2>
+    <p class="hint">Recipes live in <b>data.json</b> in a GitHub repo and are cached in this browser. With a fine-grained token (Contents: read &amp; write on that one repo) this page can save back from any device.</p>
+    <div class="row"><div><label>Owner</label><input id="s-owner"></div><div><label>Repo</label><input id="s-repo"></div><div style="flex:0 0 90px"><label>Branch</label><input id="s-branch"></div></div>
+    <div><label>Token (stored only in this browser)</label><input id="s-token" type="password" placeholder="github_pat_…"></div>
+    <p class="hint" id="s-status">Not checked.</p>
+    <div class="row">
+      <button type="button" id="s-pull" class="ghost">Pull</button>
+      <button type="button" id="s-push" class="ghost">Push</button>
+      <button type="button" id="s-save" class="primary">Save settings</button>
+    </div>
+    <div class="row">
+      <button type="button" id="s-export" class="ghost">Export JSON</button>
+      <button type="button" id="s-import" class="ghost">Import JSON</button>
+    </div>
+    <input id="s-file" type="file" accept="application/json" hidden>
+  </div>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>
