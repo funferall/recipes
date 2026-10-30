@@ -51,9 +51,10 @@ function labelTick() {
   var b = dlg && dlg.querySelector('#v-tick');
   if (!b) return;
   var on = ticked(current);
-  b.textContent = on ? 'On the list ✓' : 'Add to list';
+  b.textContent = on ? 'Listed \u2713' : 'List';
   b.style.borderColor = on ? '#4a4130' : '';
   b.style.color = on ? 'var(--lime)' : '';
+  b.style.whiteSpace = 'nowrap';
 }
 
 function open(id) {
@@ -67,7 +68,7 @@ function open(id) {
     '<h2>' + (r.emoji ? esc(r.emoji) + ' ' : '') + esc(r.name) + '</h2>' +
     (ings ? '<div><div class="lbl">Ingredients</div><ul class="ving">' + ings + '</ul></div>' : '') +
     (r.method ? '<div><div class="lbl">Method</div><p class="vm">' + esc(r.method) + '</p></div>' : '') +
-    '<div class="row"><button type="button" id="v-tick" class="ghost">Add to list</button>' +
+    '<div class="row"><button type="button" id="v-tick" class="ghost">List</button>' +
     '<button type="button" id="v-edit" class="ghost">Edit</button>' +
     '<button type="button" id="v-done" class="primary">Done</button></div></div>';
   labelTick();
