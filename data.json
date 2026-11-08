@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "updated": 1793300000000,
+  "updated": 1794096000000,
   "recipes": [
     {
       "id": "example-pasta",
@@ -24,6 +24,118 @@
       "name": "Overnight oats",
       "ingredients": ["50g oats", "120ml milk", "1 tbsp yoghurt", "1 tsp honey", "1 banana"],
       "method": "Stir everything but the banana together, leave in the fridge overnight, top with sliced banana in the morning.",
+      "img": null
+    },
+    {
+      "id": "quesadillas-black-bean-soup",
+      "emoji": "🫓",
+      "name": "Cheese quesadillas + black bean soup",
+      "ingredients": ["4 flour tortillas", "200g cheddar, grated", "400g tin black beans, drained", "1 onion", "2 cloves garlic", "1 tsp cumin", "1 tsp smoked paprika", "400ml stock", "2 tbsp olive oil", "1 lime", "soured cream to serve"],
+      "method": "Soften the onion and garlic in oil, add the spices, beans and stock, simmer 15 minutes and crush about half the beans for body. For the quesadillas, fill tortillas with cheddar, dry-fry 2–3 minutes a side until crisp and golden, cut into wedges. Serve with lime and soured cream.",
+      "img": null
+    },
+    {
+      "id": "grilled-cheese-tomato-soup",
+      "emoji": "🍅",
+      "name": "Grilled cheese + tomato soup",
+      "ingredients": ["4 slices sourdough", "100g cheddar, sliced", "30g butter", "800g tinned tomatoes", "1 onion", "1 carrot", "1 clove garlic", "1 tbsp tomato purée", "500ml stock", "1 tsp sugar", "handful basil", "salt and pepper"],
+      "method": "Sweat onion, carrot and garlic in a little butter, stir in the purée, then the tomatoes, stock and sugar. Simmer 20 minutes and blitz smooth. Butter the bread on the outside, sandwich the cheddar, and griddle low and slow until deep gold on both sides — low heat keeps the crust from burning before the cheese melts. Cut in half and dunk.",
+      "img": null
+    },
+    {
+      "id": "soup-dumplings-broth",
+      "emoji": "🥟",
+      "name": "Asian soup dumplings and broth",
+      "ingredients": ["20 frozen soup dumplings", "1L chicken stock", "2 slices ginger", "2 spring onions, plus extra to serve", "1 star anise", "1 tbsp soy sauce", "1 tsp sesame oil", "2 heads pak choi", "chilli oil to serve"],
+      "method": "Simmer the stock with ginger, star anise and the spring onion whites for 10 minutes, then strain and season with soy and sesame oil. Steam the dumplings 8–10 minutes from frozen. Blanch the pak choi in the broth for a minute, then ladle the broth over the dumplings and greens and finish with chilli oil and sliced spring onion.",
+      "img": null
+    },
+    {
+      "id": "feta-tomato-bake",
+      "emoji": "🧀",
+      "name": "Feta and cherry tomato bake over noodles or chickpeas",
+      "ingredients": ["200g block feta", "300g cherry tomatoes", "3 cloves garlic, unpeeled", "3 tbsp olive oil", "1 tsp dried oregano", "pinch chilli flakes", "200g noodles (or 2 tins chickpeas)", "1 lemon", "handful basil"],
+      "method": "Put the feta in a baking dish with the tomatoes and garlic, pour over the oil, scatter oregano and chilli, and bake at 200°C for 25–30 minutes until the tomatoes burst. Squeeze the garlic out of its skins, mash everything into a rough sauce with the lemon juice, and fold through cooked noodles or warmed chickpeas. Basil on top.",
+      "img": null
+    },
+    {
+      "id": "bolognese",
+      "emoji": "🍝",
+      "name": "Bolognese over noodles",
+      "ingredients": ["500g beef mince", "1 onion, finely diced", "1 carrot, finely diced", "1 celery stick, finely diced", "2 cloves garlic", "400g tinned tomatoes", "2 tbsp tomato purée", "150ml red wine (optional)", "200ml milk", "300g noodles or tagliatelle", "parmesan to serve", "olive oil, salt, pepper"],
+      "method": "Cook the onion, carrot and celery in oil for 10 minutes until soft, add the garlic, then brown the mince properly. Add the wine and let it reduce, then the milk, purée and tomatoes. Simmer gently for 45–60 minutes — longer is better — and season. Toss with cooked noodles and plenty of parmesan.",
+      "img": null
+    },
+    {
+      "id": "udon-stir-fry",
+      "emoji": "🍜",
+      "name": "Udon stir fry",
+      "ingredients": ["2 packs udon noodles", "200g mushrooms, sliced", "2 heads pak choi", "200g tofu or chicken", "2 cloves garlic", "thumb ginger", "2 tbsp soy sauce", "1 tbsp mirin", "1 tsp sesame oil", "2 spring onions", "sesame seeds", "1 tbsp neutral oil"],
+      "method": "Sear the tofu or chicken in a hot pan until browned, then add garlic, ginger, mushrooms and pak choi and stir-fry 2–3 minutes. Add the udon (loosened in hot water first) and the soy, mirin and sesame oil, and toss over high heat until glossy. Finish with spring onion and sesame seeds.",
+      "img": null
+    },
+    {
+      "id": "chicken-fiesta-soup",
+      "emoji": "🍗",
+      "name": "Chicken fiesta soup",
+      "ingredients": ["2 chicken breasts", "400g tin black beans", "200g tin sweetcorn", "400g tinned tomatoes", "1 onion", "1 jalapeño", "1 tsp cumin", "1 tsp chilli powder", "1L chicken stock", "1 lime", "coriander, avocado and tortilla chips to serve"],
+      "method": "Soften the onion and jalapeño, add the spices, tomatoes and stock, then the whole chicken breasts. Simmer 20 minutes, lift the chicken out and shred it, and return it with the beans and corn. Season with lime, and serve with avocado, coriander and crushed tortilla chips.",
+      "img": null
+    },
+    {
+      "id": "white-bean-lemon-smash",
+      "emoji": "🍋",
+      "name": "White bean lemon smash",
+      "ingredients": ["2 tins cannellini beans, drained", "1 lemon, zest and juice", "3 tbsp olive oil", "2 cloves garlic", "1 tsp thyme leaves", "100ml stock", "salt and black pepper", "toast to serve"],
+      "method": "Warm the sliced garlic in the oil, add the beans, thyme and stock, and simmer 5 minutes. Crush roughly with a fork, keeping some texture, then finish with the lemon zest and juice and plenty of black pepper. Spoon onto toast with more oil on top.",
+      "img": null
+    },
+    {
+      "id": "sundried-tomato-white-beans",
+      "emoji": "💍",
+      "name": "Sundried tomato white beans (\"marry me\")",
+      "ingredients": ["2 tins butter beans, drained", "100g sundried tomatoes in oil, sliced", "3 cloves garlic", "200ml cream (or coconut milk)", "300ml stock", "1 tsp smoked paprika", "50g parmesan", "handful basil", "1 tbsp oil from the tomato jar"],
+      "method": "Soften the garlic and sundried tomatoes in the tomato oil, add the paprika, beans and stock, and simmer 5 minutes. Stir in the cream and parmesan until the sauce thickens around the beans, then finish with basil. Good with bread and nothing else.",
+      "img": null
+    },
+    {
+      "id": "tortellini-soup",
+      "emoji": "🥣",
+      "name": "Tortellini soup",
+      "ingredients": ["300g fresh tortellini", "1L stock", "1 onion", "2 cloves garlic", "400g tinned tomatoes", "1 courgette, diced", "1 tsp oregano", "100g spinach", "parmesan to serve", "olive oil"],
+      "method": "Soften the onion and garlic, add the tomatoes, stock and oregano, and simmer 10 minutes. Add the courgette and tortellini and cook 4 minutes until the pasta floats, then wilt in the spinach. Serve with grated parmesan.",
+      "img": null
+    },
+    {
+      "id": "italian-wedding-soup",
+      "emoji": "🥬",
+      "name": "Italian wedding soup (macaroni, sausage, kale, tomato)",
+      "ingredients": ["300g sausage meat", "1 egg", "40g parmesan, grated", "50g breadcrumbs", "1.8L stock", "100g macaroni", "400g tinned tomatoes", "150g kale, shredded", "1 onion", "1 carrot", "2 cloves garlic", "olive oil"],
+      "method": "Mix the sausage meat with the egg, parmesan and breadcrumbs and roll into small balls; brown them in the pot and set aside. Soften the onion, carrot and garlic, add the tomatoes and stock, return the meatballs and simmer 10 minutes. Add the macaroni and kale and cook 8 minutes more until the pasta is tender.",
+      "img": null
+    },
+    {
+      "id": "feta-chicken-artichoke",
+      "emoji": "🥗",
+      "name": "Feta, chicken and artichoke (Mediterranean chicken salad)",
+      "ingredients": ["2 chicken breasts", "400g tin artichoke hearts, halved", "100g feta", "150g cherry tomatoes, halved", "½ red onion, thinly sliced", "½ cucumber, diced", "60g olives", "2 tbsp olive oil", "1 lemon", "1 tsp dried oregano", "1 clove garlic, crushed"],
+      "method": "Rub the chicken with oregano, salt and oil and griddle 5–6 minutes a side, then rest and slice. Toss with the artichokes, tomatoes, onion, cucumber and olives, dress with lemon, oil and garlic, and crumble the feta over the top.",
+      "img": null
+    },
+    {
+      "id": "halloumi",
+      "emoji": "🧀",
+      "name": "Halloumi",
+      "ingredients": ["225g halloumi", "1 lemon", "1 tbsp honey", "1 tbsp olive oil", "pinch chilli flakes", "mint leaves", "flatbreads and tomatoes to serve"],
+      "method": "Slice the halloumi about 1cm thick, pat dry, and griddle in a dry pan 2 minutes a side until deeply marked. Dress immediately with lemon juice, honey, oil, chilli and torn mint, and serve with warm flatbread and sliced tomatoes.",
+      "img": null
+    },
+    {
+      "id": "chili",
+      "emoji": "🌶️",
+      "name": "Chili",
+      "ingredients": ["500g beef mince (or 2 extra tins of beans)", "1 onion, diced", "1 red pepper, diced", "3 cloves garlic", "400g tin kidney beans", "400g tin black beans", "800g tinned tomatoes", "2 tbsp tomato purée", "2 tsp cumin", "1 tsp smoked paprika", "1 tsp chilli powder (more to taste)", "300ml stock", "20g dark chocolate", "rice, soured cream and coriander to serve"],
+      "method": "Brown the mince hard, then add the onion and pepper and cook until soft. Stir in the garlic, spices and purée, then the tomatoes and stock, and simmer 45 minutes. Add both tins of beans and cook 15 minutes more, then stir in the chocolate and check the seasoning. Serve over rice with soured cream and coriander.",
       "img": null
     }
   ]
