@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "updated": 1794096000000,
+  "updated": 1794527100000,
   "recipes": [
     {
       "id": "example-pasta",
@@ -136,6 +136,14 @@
       "name": "Chili",
       "ingredients": ["500g beef mince (or 2 extra tins of beans)", "1 onion, diced", "1 red pepper, diced", "3 cloves garlic", "400g tin kidney beans", "400g tin black beans", "800g tinned tomatoes", "2 tbsp tomato purée", "2 tsp cumin", "1 tsp smoked paprika", "1 tsp chilli powder (more to taste)", "300ml stock", "20g dark chocolate", "rice, soured cream and coriander to serve"],
       "method": "Brown the mince hard, then add the onion and pepper and cook until soft. Stir in the garlic, spices and purée, then the tomatoes and stock, and simmer 45 minutes. Add both tins of beans and cook 15 minutes more, then stir in the chocolate and check the seasoning. Serve over rice with soured cream and coriander.",
+      "img": null
+    },
+    {
+      "id": "pork-green-bean-stir-fry",
+      "emoji": "🥢",
+      "name": "Pork and green bean stir-fry over rice",
+      "ingredients": ["300g ground pork (squeezed out of sausage links, casings off)", "250g green beans, trimmed and cut into short lengths", "3 tbsp soy sauce", "2 cloves garlic, chopped", "3 spring onions or a small bunch of chives, sliced", "1 tbsp neutral oil", "2 cups cooked rice, to serve"],
+      "method": "Get the pan properly hot with the oil and blister the green beans for 3–4 minutes until they wrinkle and colour, then push them to the edge. Add the pork, break it up, and fry hard until browned with no pink left — sausage meat is already seasoned, so it needs no salt. Add the garlic, let it catch for 30 seconds, then splash in the soy sauce and toss everything together for another minute. Serve over hot rice, scattered with sliced spring onion or chives. A teaspoon of chilli oil or a pinch of sugar in the soy is worth it if you have them to hand.",
       "img": null
     }
   ]
